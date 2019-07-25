@@ -1,9 +1,9 @@
 function ComplieSonarQube() {
     Write-Host "Enter the function ComplieSonarQube:"
     Try {
-        $sourcePaths = ""
-		Set-Location "" -ErrorAction Stop
-        & cmd /c "D:\SonarScanner\sonar-scanner-3.0.1.733\bin\sonar-scanner.bat" scan -e "-Dsonar.projectName=Project-Master-Branch" "-Dsonar.projectKey=" "-Dsonar.projectVersion=1.0" "-Dsonar.host.url=http://10.123.66.131:9000" "-Dsonar.sourceEncoding=UTF-8" "-Dsonar.sources=$sourcePaths" "-Dsonar.exclusions=**/*.png,**/*.jpg,**/*.gif,**/*.config,**/*.xsl,**/*.css,**/pdf.js/**/*.*"
+        $sourcePaths = "G:\Builds"
+		#Set-Location "" -ErrorAction Stop
+        & cmd /c "C:\Users\Siva Yadav\Desktop\Tektutes\Softwares\sonar-scanner-4.0.0.1744-windows\bin\sonar-scanner.bat" scan -e "-Dsonar.projectName=Project-Master-Branch" "-Dsonar.projectKey=Project-Master-Branch" "-Dsonar.projectVersion=1.0" "-Dsonar.host.url=http://localhost:9000" "-Dsonar.sourceEncoding=UTF-8" "-Dsonar.sources=$sourcePaths" "-Dsonar.exclusions=**/*.png,**/*.jpg,**/*.gif,**/*.config,**/*.xsl,**/*.css,**/pdf.js/**/*.*" "-Dsonar.version=0.0.1"
         if ($LastExitCode -ne 0) {
         throw "Failure occured on sonar-scanner.bat execution" 
         }               

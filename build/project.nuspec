@@ -29,15 +29,15 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <version>1.0.0</version>
     <!-- <packageSourceUrl>Where is this Chocolatey package located (think GitHub)? packageSourceUrl is highly recommended for the community feed</packageSourceUrl>-->
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
-    <owners>@gmail.com</owners>
+    <owners>phanithadiboina245@gmail.com</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
     <title>project (Install)</title>
-    <authors>@gmail.com</authors>
+    <authors>phanithadiboina245@gmail.com</authors>
     <!-- projectUrl is required for the community feed -->
-    <projectUrl></projectUrl>
+    <projectUrl>https://github.com/phanithadiboina/sample.git</projectUrl>
     <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/alerts_ui.png</iconUrl>-->
     <!-- <copyright>Year Software Vendor</copyright> -->
     <!-- If there is a license Url available, it is is required for the community feed -->
@@ -71,7 +71,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
     <file src="tools\**" target="tools" />
-    <file src="..\..\dist\**"  target="source" />
+    <file src="..\**"  target="source" />
     <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
   </files>
 </package>

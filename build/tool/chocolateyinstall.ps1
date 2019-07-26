@@ -27,7 +27,7 @@ if ($packageParameters) {
    }
 #folder copy
 try {
-    Copy-Item "${package}\Project\source\" "C:\Project" -Recurse -Force
+    Copy-Item "C:\ProgramData\chocolatey\lib\project\source" "C:\Project" -Recurse -Force
     if(-not $?) {
         throw "Failure occured on Project Copy-Item:$_" 
       }  
